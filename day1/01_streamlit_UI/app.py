@@ -2,28 +2,33 @@ import streamlit as st
 import pandas as pd
 import numpy as np
 import time
+import os, pathlib
+
+print("テスト最終cwd:", os.getcwd())                                   # ← カレントディレクトリ
+print("exists:", pathlib.Path("/content//lecture-ai-engineering/day1/01_streamlit_UI/猫.jpg").exists())
 
 # ============================================
 # ページ設定
 # ============================================
-# st.set_page_config(
-#     page_title="Streamlit デモ",
-#     layout="wide",
-#     initial_sidebar_state="expanded"
-# )
+st.set_page_config(
+    page_title="Streamlit デモ",
+    layout="wide",
+    initial_sidebar_state="expanded"
+)
 
 # ============================================
 # タイトルと説明
 # ============================================
-st.title("Streamlit 初心者向けデモ")
-st.markdown("### コメントを解除しながらStreamlitの機能を学びましょう")
-st.markdown("このデモコードでは、コメントアウトされた部分を順番に解除しながらUIの変化を確認できます。")
+st.title("Streamlit 提出用")
+# st.markdown("### コメントを解除しながらStreamlitの機能を学びましょう")
+# st.markdown("このデモコードでは、コメントアウトされた部分を順番に解除しながらUIの変化を確認できます。")
+st.image("/content//lecture-ai-engineering/day1/01_streamlit_UI/猫.jpg",width=300)
 
 # ============================================
 # サイドバー 
 # ============================================
-st.sidebar.header("デモのガイド")
-st.sidebar.info("コードのコメントを解除して、Streamlitのさまざまな機能を確認しましょう。")
+# st.sidebar.header("デモのガイド")
+# st.sidebar.info("コードのコメントを解除して、Streamlitのさまざまな機能を確認しましょう。")
 
 # ============================================
 # 基本的なUI要素
